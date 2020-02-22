@@ -3,12 +3,37 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Creative Project 2</title>
+  <title>Your Next Holiday</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link rel="stylesheet" href="/styles.css" />
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
+  <script text="type/javascript" src="/script.js">
+  </script>
 </head>
 
 <body>
+  <nav class="navbar navbar-expand-lg">
+    <h1 id=date-today></h1>
+  </nav>
+  <div class="row">
+    <div class="col-lg" align="center">
+      <div class="dashboard">
+        <div class="card todayCard">
+          <h6>Today's Holidays</h6>
+          <div id="today">
+          </div>
+        </div>
+        <div class="dashboard-right-column">
+          <div class="card upcoming" id="next-holiday">
+          </div>
+          <div class="card upcoming" id="next-public">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="upcoming-table">
+  </div>
 
   <footer class="footer">
     <div class="container">
@@ -17,8 +42,7 @@
   </footer>
 
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-  <script text="type/javascript" src="/script.js">
-  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
 </body>
 
 </html>

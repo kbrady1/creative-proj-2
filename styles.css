@@ -1,8 +1,34 @@
+/*
+  background-color: #FAFAFA
+  light-red: #bddbde
+  dark-red: #13646b
+  dark-blue: #13646b
+  light-blue: #bddbde
+  light-orange: #F5D0A9
+*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Arial", sans-serif;
+  font-family: "Helvetica Neue", sans-serif;
+}
+
+#content {
+  visibility: hidden;
+}
+
+#load-view {
+  visibility: visible;
+}
+
+h1 {
+  font-family: 'Abril Fatface', 'Arial';
+  color: #13646b;
+  font-size: 4em;
+}
+
+h2 {
+  font-family: 'Abril Fatface', 'Arial';
 }
 
 html {
@@ -13,6 +39,18 @@ html {
 body {
   /* This should match the footer height */
   margin-bottom: 64px;
+  background-color: #FAFAFA;
+}
+
+.navbar, .navbar-nav, .navbar-expand-lg {
+  width: 100%;
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+
+.navbar, .navbar-collapse, .navbar-expand-lg {
+  text-align: center;
 }
 
 .footer {
@@ -22,21 +60,132 @@ body {
   height: 60px;
   line-height: 60px;
   text-align: center;
-  background-color: #EFFBFB;
+  background-color: #FAFAFA;
 }
 
 .text-muted {
-  color: #0B615E !important;
+  color: #13646b !important;
   opacity: 0.7;
 }
 
-.container {
-  width: 100%;
+.row {
+  margin-top: 24px;
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.dashboard-right-column {
+  min-width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card {
+  border-radius: 8px;
+  background-color: #ffffff;
+  border: 4px solid #bddbde;
+  height: 200px;
+  margin: 4px;
+}
+
+.upcoming {
+  min-width: 100%;
+}
+
+.todayCard {
+  height: 408px;
+  min-width: 40%;
+}
+
+#today {
+  display: flex;
+  flex-direction: column;
   height: 100%;
+  justify-content: space-around;
+}
+
+.card-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding: 12px;
+}
+
+.card-days {
+  margin: 4px 12px;
+  font-size: 6em;
+  color: #13646b;
+  font-family: 'Abril Fatface', 'Arial';
+}
+
+h6 {
+  padding: 4px 8px;
+  text-align: left;
+  background-color: #bddbde;
+  color: #ffffff;
+}
+
+.card-info {
+  min-width: 70%;
+  font-size: 1.25em;
+  color: #bddbde;
+  text-align: left;
+  padding-left: 4px;
+}
+
+em {
+  color: #13646b;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.holiday-table {
+  width: 80%;
+}
+
+th {
+  background-color: #bddbde;
+}
+
+th, td {
+  padding: 6px 0px;
 }
 
 /* Large Screens */
 @media only screen and (max-width: 2000px) and (min-width: 1023px) {}
 
 /* Small screens */
-@media only screen and (max-width: 650px) {}
+@media only screen and (max-width: 880px) {
+  .dashboard {
+    flex-direction: column;
+  }
+
+  .holiday-table {
+    width: 95%;
+  }
+
+  .todayCard {
+    height: 300px;
+    min-width: 95%;
+  }
+
+  .dashboard-right-column {
+    min-width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .upcoming {
+    min-width: 95%;
+  }
+}
